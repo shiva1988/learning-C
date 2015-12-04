@@ -1,0 +1,16 @@
+let's suppose that the maxSize  of bites we can have is 2^63
+For the sake simplicity, let's suppose that we have a string like 100010,
+which is given in base 2.
+In order to convert this into base 10, one should :
+         look at the above string as an array a where a[0] = 1, a[1] = 0, a[2]
+= 0, a[3] = 0, a[4] =1, and a[5] = 0
+
+To get our string in base 10, we need to compute a[o]*2^4 + a[1]*2^3 + a[2]*2
++ a[3]*2^2 + a[4]*2^1 + a[5]*2^0
+
+In the case we keep increasing the positive value behond the number of bits to
+store it, we will have an overflow.
+we can say:
+The positive integer numbers are stored in its binary form, i.e., as a sequence of zeros and ones. The code constructed in the file positive_int.c is a 'reverse engineering' of this proccess.
+If the number is stored in an N-bit type, then the bigest possible value for it is 2^(N-1)-1, because the first element of the sequence is reserved for the signal (it must be 0 for positive integers).
+Due to it, if the number is higher than 2^(N-1)-1, its binary sequence will correspond to the sequence of a negative integer.
