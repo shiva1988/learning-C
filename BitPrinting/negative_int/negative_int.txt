@@ -1,0 +1,14 @@
+let's suppose that the maxSize  of bites we can have is - 2^63
+
+Now, let's suupose that we have a negative integer. for example -5. In order to get the binary representation of -5
+one should first have the binary representation of 5 which is 00101. From this, one should think of using  the mapping 2's
+ complement which will be 11010, then add 1 to the obtained result which will give us 11011.
+
+ As well known, casting a negative integer will lead to a conversion of that integer to a positive one. This
+could be a source of many errors. Among many others, one could mention that
+this could bring computational overhead.
+we can say,The negative integer numbers are stored in a binary form, i.e., as a sequence of zeros and ones. The code constructed in the file negative_int.c is a 'reverse engineering' of this proccess.
+
+If the integer is casted to an N-bit type, then the bigest possible value for it that will be correctly stored is -2^(N-1)-1, because representations of negative integers numbers must start with 1, because this is a bit reserved to the signal of the number (1 for negatives integers and 0 for positives integers).
+
+Due to it, if you cast a negative integer to an unsigned type, only its module will be stored, and this part will be done in the same way positive integers are stored.
