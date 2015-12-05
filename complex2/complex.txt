@@ -1,0 +1,3 @@
+when I don't seperate files to 3 parts:complex.h & complex.c & test;
+and I write all of them into newcomplex2.c,it shows my code is totally correct,but after seperating these 3 files it gave me error!!
+so I had to change my code again,and my new code is now into thisfile:complex .
